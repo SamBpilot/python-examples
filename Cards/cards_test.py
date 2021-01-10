@@ -43,6 +43,12 @@ class CardsTestCase(unittest.TestCase):
         self.assertEqual(25, cards.handscore(["0S", "9C", "6D"]))
         self.assertEqual(18, cards.handscore(["3S", "6C", "9D"]))
 
+    def test_deck(self):
+        '''Tests for the function deck which outputs the score of a hand'''
+        self.assertEqual(380, cards.handscore(cards.deck()))
+        self.assertEqual(52, len(cards.deck()))
+
+
 
 if __name__ == '__main__':
     unittest.main()

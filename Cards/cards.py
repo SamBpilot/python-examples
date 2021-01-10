@@ -48,3 +48,18 @@ def handscore(cards):
         card = value(card)
         total += card
     return(total)
+
+def deck():
+    '''Puts all the cards into a random order and gets an array for it'''
+    cards = []
+    for suit in ["C", "H", "S", "D"]:
+        for value in ["0", "2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K", "A"]:
+            card = f"{value}{suit}"
+            cards += [card]
+
+    random.shuffle(cards)
+    return(cards)
+
+
+if __name__ == '__main__':
+    print(deck())
