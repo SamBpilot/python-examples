@@ -7,9 +7,11 @@ def name(card):
     elif value == "K":
         value = "King"
     elif value == "Q":
-        value = "Qeen"
+        value = "Queen"
     elif value == "J":
         value = "Jack"
+    elif value == "0":
+        value = "10"
 
     if suit == "H":
         suit = "Hearts"
