@@ -1,3 +1,5 @@
+import random
+
 def name(card):
     '''Takes the initials of a card and returns its name'''
     suit = card[1]
@@ -39,3 +41,10 @@ def value(card):
     else:
         value = int(value)
     return value
+
+def handscore(cards):
+    total = 0
+    for card in cards:
+        card = value(card)
+        total += card
+    return(total)

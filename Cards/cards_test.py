@@ -34,6 +34,15 @@ class CardsTestCase(unittest.TestCase):
         self.assertEqual(10, cards.value("KS"))
         self.assertEqual(11, cards.value("AS"))
 
+    def test_handscore(self):
+        '''Tests for the function handscore which will find the score of someone's hand'''
+        self.assertEqual(21, cards.handscore(["AS", "8C", "2D"]))
+        self.assertEqual(15, cards.handscore(["KS", "2C", "3D"]))
+        self.assertEqual(22, cards.handscore(["JS", "5C", "7D"]))
+        self.assertEqual(15, cards.handscore(["QS", "3C", "2D"]))
+        self.assertEqual(25, cards.handscore(["0S", "9C", "6D"]))
+        self.assertEqual(18, cards.handscore(["3S", "6C", "9D"]))
+
 
 if __name__ == '__main__':
     unittest.main()
