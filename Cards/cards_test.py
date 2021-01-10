@@ -17,6 +17,23 @@ class CardsTestCase(unittest.TestCase):
         self.assertEqual("2 of Diamonds", cards.name("2D"))
         self.assertEqual("Queen of Diamonds", cards.name("QD"))
 
+    def test_value(self):
+        '''Tests for the function value'''
+        self.assertEqual(9, cards.value("9S"))
+        self.assertEqual(10, cards.value("0S"))
+        self.assertEqual(8, cards.value("8S"))
+        self.assertEqual(7, cards.value("7S"))
+        self.assertEqual(6, cards.value("6S"))
+        self.assertEqual(5, cards.value("5S"))
+        self.assertEqual(4, cards.value("4S"))
+        self.assertEqual(3, cards.value("3S"))
+        self.assertEqual(2, cards.value("2S"))
+        self.assertEqual(1, cards.value("1S"))
+        self.assertEqual(10, cards.value("JS"))
+        self.assertEqual(10, cards.value("QS"))
+        self.assertEqual(10, cards.value("KS"))
+        self.assertEqual(11, cards.value("AS"))
+
 
 if __name__ == '__main__':
     unittest.main()

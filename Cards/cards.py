@@ -21,7 +21,21 @@ def name(card):
         suit = "Clubs"
     elif suit == "S":
         suit = "Spades"
-
-
-
     return(f"{value} of {suit}")
+
+def value(card):
+    '''Finding the value of a card'''
+    value = card[0]
+    if value == "A":
+        value = 11
+    elif value == "K":
+        value = 10
+    elif value == "Q":
+        value = 10
+    elif value == "J":
+        value = 10
+    elif value == "0":
+        value = 10
+    else:
+        value = int(value)
+    return value
